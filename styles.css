@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 40px;
+    /* background: #eaeff7; */
+    background-color: #ecf4fb;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+header h1{
+    letter-spacing: 5px;
+}
+
+.input-radio{
+    display: none;
+}
+
+main{
+    padding: 20px;
+}
+
+label{
+    cursor: pointer;
+}
+
+label h3{
+    text-decoration: underline;
+}
+
+div.all-my-photos,
+div.all-school-photos,
+div.all-family-pics{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 50px;
+}
+
+img{
+    width: 100%;
+    border-radius: 2%;
+}
+
+div.all-videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 90fr));
+    grid-gap: 50px;
+    padding: 20px;
+}
+
+video{
+    width: 90%;
+    /* height: ; */
+}
+
+/* img.img1{
+    display: none;
+} */
