@@ -1,17 +1,22 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-family: sans-serif;
     line-height: 40px;
-    /* background-color: #ecf4fb; */
+    font-family: 'Nunito', sans-serif;
 }
 
 header{
-    border-top: 1px solid rgb(254, 137, 74);
-    border-bottom: 2px solid rgb(254, 137, 74);
+    position: fixed;
+    width: 100%;
+    height: 13%;
+    z-index: 2;
+    background-color: #ecf4fb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header section{
@@ -35,7 +40,7 @@ header figure{
 
 header figcaption{
     margin-left: 5px;
-    opacity: .7;
+    opacity: .8;
 }
 
 
@@ -84,8 +89,28 @@ main{
     padding: 20px;
 }
 
-.input-radio{
-    display: none;
+main{
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+}
+
+main .first-main-section{
+    position: fixed;
+    height: 100%;
+    width: 25vw;
+    margin: 80px 0 0 -15px;
+    padding: 3px 8px 2px;
+    border-right: 1px solid rgb(254, 137, 74);
+    background-color: #ecf4fb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+}
+
+main .second-main-section{
+    z-index: 1;
+    margin-left: 18%;
+    margin-top: 10%;
 }
 
 label{
@@ -135,7 +160,30 @@ div.all-videos{
 
 
 /* MEDIA QUERY */
-@media screen and (min-width: 789px) {
+/* ======== MEDIA SCREENS >= 280PX ========== */
+@media screen and (min-width: 280px) {
+    main .first-main-section{
+        width: 40vw;
+        margin: 97px 0 0 -15px;
+    } 
+
+    main .second-main-section{
+        margin-top: 13%;
+        margin-left: 14%;
+    }
+}
+
+
+/* ======== MEDIA SCREENS >= 540PX ========== */
+@media screen and (min-width: 540px) {
+    main .first-main-section{
+        margin: 77px 0 0 -15px;
+    } 
+}
+
+
+/* ======== MEDIA SCREENS >= 768PX ========== */
+@media screen and (min-width: 768px) {
     header section{
         display: flex;
         justify-content: space-between;
@@ -168,5 +216,46 @@ div.all-videos{
         font-size: 20px;
         line-height: 50px;
         margin-left: 10px;
+    }
+
+    main .first-main-section{
+        width: 15vw;
+        height: 100%;
+        margin: 110px 0 0 -15px;
+    }
+
+    main .second-main-section{
+        margin-top: 12%;
+        margin-left: 15%;
+    }
+}
+
+
+/* ======== MEDIA SCREENS >= 820PX ========== */
+@media screen and (min-width: 820px) {
+    main .first-main-section{
+        width: 15vw;
+        height: 100%;
+        margin: 129px 0 0 -15px;
+    }
+
+    main .second-main-section{
+        margin-top: 13%;
+        margin-left: 15%;
+    }
+}
+
+
+/* ======== MEDIA SCREENS >= 912PX ========== */
+@media screen and (min-width: 912px) {
+    main .first-main-section{
+        width: 15vw;
+        height: 100%;
+        margin: 160px 0 0 -15px;
+    }
+
+    main .second-main-section{
+        margin-top: 15%;
+        margin-left: 15%;
     }
 }
