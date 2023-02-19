@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
     <title>Photo Gallery</title>
   </head>
@@ -40,19 +44,18 @@
     </header>
 
     <main>
-      <section>
-        <div class="input-radio">
-          <input type="radio" name="img1" id="img1" checked />
-          <input type="radio" name="img2" id="img2" />
-          <input type="radio" name="img3" id="img3" />
-          <input type="radio" name="img4" id="img4" />
-          <input type="radio" name="img5" id="img5" />
-        </div>
+      <section class="first-main-section">
+        <label for="img1" class="my-photos"><h3>All Photos</h3></label>
+        <label for="img2" class="school"><h3>School</h3> </label>
+        <label for="img3" class="instagram"><h3>Instagram</h3> </label>
+        <label for="img4" class="family"><h3>Family</h3> </label>
+        <label for="img5" class="food"><h3>Food</h3></label>
+        <label for="vid6" class="videos"><h3>Videos</h3></label>
+      </section>
 
+      <section class="second-main-section">
         <div class="images">
           <div class="my-photo-div">
-            <label for="img1" class="my-photos"><h3>All Photos</h3></label>
-
             <div class="all-my-photos">
               <img src="images/instttttaaa.jpg" alt="" />
               <img src="images/oodddd.jpg" alt="" />
@@ -82,8 +85,6 @@
           </div>
 
           <div>
-            <label for="img2" class="school"><h3>School</h3> </label>
-
             <div class="all-school-photos">
               <img class="school-photos" src="images/img7.JPG" alt="" />
               <img class="school-photos" src="images/inst.jpg" alt="" />
@@ -93,7 +94,6 @@
           </div>
 
           <div>
-            <label for="img3" class="instagram"><h3>Instagram</h3> </label>
             <div class="all-instagram-photos">
               <img src="images/instattata.jpg" alt="" />
               <img src="images/insta.jpg" alt="" />
@@ -103,7 +103,6 @@
           </div>
 
           <div>
-            <label for="img4" class="family"><h3>Family</h3> </label>
             <div class="all-family-photos">
               <img src="images/obii.jpg" alt="" />
               <img src="images/boo2.JPG" alt="" />
@@ -112,7 +111,6 @@
           </div>
 
           <div>
-            <label for="img5" class="food"><h3>Food</h3></label>
             <div class="all-food-photos">
               <img src="images/oodddd.jpg" alt="" />
             </div>
@@ -120,7 +118,6 @@
 
           <!-- video -->
           <div>
-            <label for="vid6" class="videos"><h3>Videos</h3></label>
             <br />
             <div class="all-videos">
               <video src="videos/vid1.MP4" controls></video>
