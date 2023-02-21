@@ -2,18 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-y: none;
 }
 
 body{
     font-family: sans-serif;
     line-height: 40px;
     font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
 }
 
 header{
     position: fixed;
     width: 100%;
-    height: 13%;
     z-index: 2;
     background-color: #ecf4fb;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -21,31 +22,27 @@ header{
 
 header section{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 20px 20px;
+    font-size: 10px;
 }
 
 header .logo{
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     cursor: pointer;
 }
 
 header figure{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    line-height: 20px;
 }
 
 header figcaption{
-    margin-left: 5px;
     opacity: .8;
 }
 
-
 header input{
-    padding: 5px;
+    padding: 3px;
     border-radius: 3%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.4);
     border: none;
@@ -59,15 +56,14 @@ header .profile-pics:hover{
 }
 
 header input::placeholder{
-    font-size: 12px;
+    font-size: 10px;
     opacity: .6;
 }
 
 header a{
     text-decoration: none;
-    font-size: small;
-    padding: 10px 15px;
-    border-radius: 15%;
+    padding: 3px;
+    border-radius: 10%;
     color: #fff;
     background-color: #6969de;
     opacity: .7;
@@ -75,12 +71,11 @@ header a{
 
 header .profile-pics{
     cursor: pointer;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     margin-top: 10px;
     border-radius: 20px;
 }
-
 
 
 /*====== MAIN SECTION ============= */
@@ -95,32 +90,32 @@ main{
     position: relative;
 }
 
-main .first-main-section{
+main aside{
     position: fixed;
     height: 100%;
     width: 25vw;
-    margin: 80px 0 0 -15px;
+    margin: 40px 0 0 -20px;
     padding: 3px 8px 2px;
     border-right: 1px solid rgb(254, 137, 74);
     background-color: #ecf4fb;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-
 }
 
 main .second-main-section{
     z-index: 1;
-    margin-left: 18%;
-    margin-top: 10%;
+    margin-left: 25%;
+    margin-top: 5%;
 }
 
 label{
     cursor: pointer;
+    font-size: 12px;
 }
 
-label h3{
-    text-decoration: underline;
+label:hover{
+    opacity: .7;
+    font-weight: bold;
 }
-
 
 div.all-my-photos,
 div.all-school-photos,
@@ -130,12 +125,13 @@ div.all-food-photos,
 div.all-videos{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-    padding: 50px;
+    grid-gap: 5px;
+    padding: 30px;
 }
 
 img{
-    width: 100%;
+    width: 80%;
+    height: 80%;
     border-radius: 2%;
 }
 
@@ -160,37 +156,21 @@ div.all-videos{
 
 
 /* MEDIA QUERY */
-/* ======== MEDIA SCREENS >= 280PX ========== */
-@media screen and (min-width: 280px) {
-    main .first-main-section{
-        width: 40vw;
-        margin: 97px 0 0 -15px;
-    } 
-
-    main .second-main-section{
-        margin-top: 13%;
-        margin-left: 14%;
-    }
-}
-
-
-/* ======== MEDIA SCREENS >= 540PX ========== */
-@media screen and (min-width: 540px) {
-    main .first-main-section{
-        margin: 77px 0 0 -15px;
-    } 
-}
 
 
 /* ======== MEDIA SCREENS >= 768PX ========== */
 @media screen and (min-width: 768px) {
     header section{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         margin: 10px 80px;
-        margin-left: 20px;
-        padding-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    header figure{
+        display: flex;
+        align-items: center;
     }
 
     header input{
@@ -200,39 +180,40 @@ div.all-videos{
     }
 
     header input::placeholder{
-        font-size: 14px;
+        font-size: 12px;
     }
     
     header a{
-        padding: 15px 20px;
+        padding: 10px 15px;
     }
 
     header .logo{
-        height: 40px;
-        width: 40px;
+        height: 20px;
+        width: 20px;
+    }
+
+    header figure{
+        margin-left: -40px;
     }
 
     header figcaption{
-        font-size: 20px;
-        line-height: 50px;
-        margin-left: 10px;
+        font-size: 13px;
     }
 
-    main .first-main-section{
-        width: 15vw;
+    main aside{
+        width: 10vw;
         height: 100%;
-        margin: 110px 0 0 -15px;
+        margin: 60px 0 0 -17px;
     }
 
     main .second-main-section{
-        margin-top: 12%;
-        margin-left: 15%;
+        margin-left: 10%;
     }
 }
 
 
 /* ======== MEDIA SCREENS >= 820PX ========== */
-@media screen and (min-width: 820px) {
+/* @media screen and (min-width: 820px) {
     main .first-main-section{
         width: 15vw;
         height: 100%;
@@ -243,11 +224,11 @@ div.all-videos{
         margin-top: 13%;
         margin-left: 15%;
     }
-}
+} */
 
 
 /* ======== MEDIA SCREENS >= 912PX ========== */
-@media screen and (min-width: 912px) {
+/* @media screen and (min-width: 912px) {
     main .first-main-section{
         width: 15vw;
         height: 100%;
@@ -258,4 +239,4 @@ div.all-videos{
         margin-top: 15%;
         margin-left: 15%;
     }
-}
+} */
