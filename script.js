@@ -33,7 +33,7 @@ family.addEventListener("click", (e) => {
 
   if ((allFamilyPhotos.style.display = "none")) {
     allFamilyPhotos.style.display = "grid";
-  } else {
+  } else if ((allFamilyPhotos.style.display = "grid")) {
     allFamilyPhotos.style.display = "none";
   }
 });
